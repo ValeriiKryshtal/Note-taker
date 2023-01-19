@@ -21,21 +21,6 @@ app.get('/', (req, res) =>
 app.get('/notes', (req, res) =>
      res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
-// app.get("/api/notes/:id", (req,res) => {
-//      // display json for the notes array indices of the provided id
-//      res.json(notes[req.params.id]);
-// });
-// app.delete("/api/notes/:id", (req, res) => {
-//      notes.splice(req.params.id, 1);
-//      updateDb();
-//      console.log("Deleted note with id "+req.params.id);
-// });
-// function updateDb() {
-//      fs.writeFile("db/db.json",JSON.stringify(notes,'\t'),err => {
-//           if (err) throw err;
-//           return true;
-//      });
-// }
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) =>
      res.sendFile(path.join(__dirname, 'public/pages/404.html'))
